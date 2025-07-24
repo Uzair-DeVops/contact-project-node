@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  nodeapp:
+    build: .
+    container_name: contact-node-app
+    ports:
+      - "3500:3500"
+    environment:
+      - MONGO_URI=mongodb://uzair:uzairyasin123@host.docker.internal:27017/my_database?authSource=admin
+
